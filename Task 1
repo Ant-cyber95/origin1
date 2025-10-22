@@ -1,0 +1,77 @@
+
+#include <iostream>
+#include <string>
+
+enum Month {
+    January = 1,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+};
+
+int main() {
+    int monthNumber;
+
+    do {
+        std::cout << "Введите номер месяца: ";
+        std::cin >> monthNumber;
+
+        if (monthNumber == 0) {
+            std::cout << "До свидания" << std::endl;
+            break;
+        }
+
+        if (monthNumber >= 1 && monthNumber <= 12) {
+            switch (monthNumber) {
+                case January:
+                    std::cout << "Январь" << std::endl;
+                    break;
+                case February:
+                    std::cout << "Февраль" << std::endl;
+                    break;
+                case March:
+                    std::cout << "Март" << std::endl;
+                    break;
+                case April:
+                    std::cout << "Апрель" << std::endl;
+                    break;
+                case May:
+                    std::cout << "Май" << std::endl;
+                    break;
+                case June:
+                    std::cout << "Июнь" << std::endl;
+                    break;
+                case July:
+                    std::cout << "Июль" << std::endl;
+                    break;
+                case August:
+                    std::cout << "Август" << std::endl;
+                    break;
+                case September:
+                    std::cout << "Сентябрь" << std::endl;
+                    break;
+                case October:
+                    std::cout << "Октябрь" << std::endl;
+                    break;
+                case November:
+                    std::cout << "Ноябрь" << std::endl;
+                    break;
+                case December:
+                    std::cout << "Декабрь" << std::endl;
+                    break;
+            }
+        } else {
+            std::cout << "Неправильный номер!" << std::endl;
+        }
+    } while (true);
+
+    return 0;
+}

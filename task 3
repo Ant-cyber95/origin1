@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+struct Address {
+    std::string city;       // название города
+    std::string street;     // улица
+    int houseNumber;        // номер дома
+    int apartmentNumber;    // номер квартиры
+    std::string postalCode; // индекс
+};
+
+void printAddress(const Address& addr) {
+    std::cout << "Город: " << addr.city << std::endl;
+    std::cout << "Улица: " << addr.street << std::endl;
+    std::cout << "Номер дома: " << addr.houseNumber << std::endl;
+    std::cout << "Номер квартиры: " << addr.apartmentNumber << std::endl;
+    std::cout << "Индекс: " << addr.postalCode << std::endl;
+    std::cout << std::endl; // для разделения между адресами
+}
+
+int main() {
+    Address address1 = {"Киров", "Воровского", 94, 8, "123456"};
+    Address address2 = {"Котельнич", "Советская", 12, 22, "953769"};
+
+    printAddress(address1);
+    printAddress(address2);
+
+    return 0;
+}
